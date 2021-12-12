@@ -1,0 +1,15 @@
+name: d8cards
+recipe: drupal8
+proxy:
+  pma:
+    - pma.ohchr.lndo.site
+config:
+  webroot: web
+services:
+  database:
+    type: 'mysql'
+  # PhpMyAdmin
+  pma:
+    type: phpmyadmin
+    hosts:
+      - database
